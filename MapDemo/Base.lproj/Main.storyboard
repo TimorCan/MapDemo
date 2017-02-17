@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-y9-lVL">
+                                <rect key="frame" x="0.0" y="186" width="375" height="481"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="地名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fct-DA-cws">
+                                <rect key="frame" x="100" y="28" width="174" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqD-7R-Ywt">
+                                <rect key="frame" x="172" y="148" width="31" height="30"/>
+                                <state key="normal" title="转换"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cX2-IR-Tl7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="经度" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hR-O4-Toa">
+                                <rect key="frame" x="28" y="79" width="132" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="OlF-FM-GeJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="纬度" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-mc-drj">
+                                <rect key="frame" x="213" y="79" width="132" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3hR-O4-Toa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="5lG-uT-0X3"/>
+                            <constraint firstItem="3hR-O4-Toa" firstAttribute="top" secondItem="fct-DA-cws" secondAttribute="bottom" constant="21" id="6lA-dd-lDs"/>
+                            <constraint firstItem="fct-DA-cws" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="APn-uQ-pGM"/>
+                            <constraint firstItem="dRB-mc-drj" firstAttribute="leading" secondItem="3hR-O4-Toa" secondAttribute="trailing" constant="53" id="BP3-1F-aIS"/>
+                            <constraint firstAttribute="trailing" secondItem="nGr-y9-lVL" secondAttribute="trailing" id="E28-R3-0ui"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dRB-mc-drj" secondAttribute="trailing" constant="14" id="Iul-DH-U3r"/>
+                            <constraint firstItem="lqD-7R-Ywt" firstAttribute="centerX" secondItem="nGr-y9-lVL" secondAttribute="centerX" id="X8X-l2-n9h"/>
+                            <constraint firstItem="nGr-y9-lVL" firstAttribute="top" secondItem="lqD-7R-Ywt" secondAttribute="bottom" constant="8" symbolic="YES" id="hxd-G2-ahq"/>
+                            <constraint firstItem="nGr-y9-lVL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="l5R-44-g54"/>
+                            <constraint firstItem="fct-DA-cws" firstAttribute="centerX" secondItem="lqD-7R-Ywt" secondAttribute="centerX" id="mbA-sZ-SML"/>
+                            <constraint firstItem="3hR-O4-Toa" firstAttribute="baseline" secondItem="dRB-mc-drj" secondAttribute="baseline" id="nEE-SC-kM4"/>
+                            <constraint firstItem="nGr-y9-lVL" firstAttribute="top" secondItem="3hR-O4-Toa" secondAttribute="bottom" constant="77" id="nxI-IM-Vqj"/>
+                            <constraint firstItem="nGr-y9-lVL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sgR-6g-w8R"/>
+                            <constraint firstItem="fct-DA-cws" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xHZ-j7-s9r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dmTF" destination="fct-DA-cws" id="Ftx-a4-VKj"/>
+                        <outlet property="jdTF" destination="3hR-O4-Toa" id="pRl-Fw-rP7"/>
+                        <outlet property="mapView" destination="nGr-y9-lVL" id="Ofu-pv-B0g"/>
+                        <outlet property="wdTF" destination="dRB-mc-drj" id="iNj-EF-kDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
